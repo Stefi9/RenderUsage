@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CHANGE: Tab title shown in the browser -->
+    <title>Stefi's Personal Sociales</title>
+    <style>
+        :root {
+            --bg-main: #121212;
+            --bg-card: #1e1e1e;
+            --accent-blue: #2196f3;
+            --accent-green: #4caf50;
+            --accent-orange: #ff4500;
+            --text-main: #e0e0e0;
+            --text-muted: #888;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .back-nav {
+            margin-bottom: 30px;
+        }
+        .back-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+        .back-nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        header {
+            background: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        header p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+            margin: 40px 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-blue);
+        }
+
+        .card.reddit:hover { border-color: var(--accent-orange); }
+        .card.counter:hover { border-color: var(--accent-green); }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: #fff;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-top: 15px;
+            background: #2a2a2a;
+            color: var(--text-muted);
+        }
+        .status.active {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--accent-green);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="back-nav">
+            <!-- CHANGE: URL of your "parent" page, or remove this whole block if this IS your root page -->
+            <a href="/">&#8592; Back to Server System</a>
+        </div>
+
+        <header>
+            <!-- CHANGE: Your name / page title -->
+            <h1>Stefi's Sociales</h1>
+            <!-- CHANGE: Your personal bio or description of what this page is -->
+            <p>Welcome to my localized web layout. This page acts as my central interface for developing projects, sorting tools, and organizing code pipelines completely independent of third-party cloud templates.</p>
+        </header>
+
+        <!-- CHANGE: Section heading text -->
+        <div class="section-title">Development Hub</div>
+        <div class="grid">
+            
+            <!-- CHANGE: href → URL of your hosted app/project (can be a relative path or full URL) -->
+            <a href="https://github.com/Stefi9/ist" class="card counter">
+                <!-- CHANGE: Card title -->
+                <h3>IST</h3>
+                <!-- CHANGE: Card description -->
+                <p>Internet Servicing Tool, great for managing online services.</p>
+                <!-- CHANGE: Status label text; remove class="active" if it's not live yet -->
+                <div class="status active">Active Application</div>
+            </a>
+
+            <!-- CHANGE: href → URL of this project -->
+            <a href="/site/" class="card">
+                <h3>Website Engine</h3>
+                <p>Your core personal homepage dashboard environment replacing old Google Sites deployment.</p>
+                <div class="status active">Active Application</div>
+            </a>
+
+            <!-- To add more project cards, copy one <a class="card">...</a> block and paste it here -->
+
+        </div>
+
+        <!-- CHANGE: Section heading text -->
+        <div class="section-title">My sociales</div>
+        <div class="grid">
+            
+            <!-- CHANGE: href → your actual GitHub profile URL, e.g. https://github.com/Stefi9 -->
+            <a href="https://github.com" target="_blank" class="card">
+                <h3>GitHub</h3>
+                <!-- CHANGE: Description -->
+                <p>Repository tracking, absolute version control, and backup source blocks.</p>
+            </a>
+
+            <!-- CHANGE: href → your Reddit profile, e.g. https://reddit.com/u/YourUsername -->
+            <a href="https://reddit.com" target="_blank" class="card reddit">
+                <h3>Reddit</h3>
+                <p>Community feeds, dev forums, asset tracking, and open discussions.</p>
+            </a>
+
+            <!-- CHANGE: href → swap for whatever reference site you actually use (e.g. https://ss64.com for Batch docs) -->
+            <a href="https://stackoverflow.com" target="_blank" class="card">
+                <!-- CHANGE: Title to match the site you link -->
+                <h3>Documentation Hub</h3>
+                <p>External logic references, query lookup pipelines, and language syntax parsing.</p>
+            </a>
+
+            <!-- To add more quicklink cards, copy one <a class="card">...</a> block and paste it here -->
+
+        </div>
+
+    </div>
+
+</body>
+</html>
